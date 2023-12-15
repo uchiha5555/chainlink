@@ -1,2 +1,2 @@
-# chainlink
-This is frontend project that forked chainlink website.
+# nft-marketplace
+This is nft marketplace made by MERN stack. Let's create a new world with shinobi.
