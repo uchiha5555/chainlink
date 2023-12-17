@@ -1,5 +1,5 @@
 import React from 'react'
-import { ChoiceCard, ChoiceContainer, Description, IconContainer } from './style'
+import { CardActionContainer, ChoiceCard, ChoiceContainer, Description, IconContainer } from './style'
 import { Icon } from '@/components/custom'
 import { Flex, P } from '@/components/basic'
 
@@ -21,20 +21,10 @@ const Choice = () => {
                 }
             }}>
                 <P $style={{ size: '15px', color: 'header' }}>Developer resources</P>
-                <Flex $style={{
-                    hAlign: 'space-between',
-                    vAlign: 'center',
-                    gap: '40px',
-                    queries: {
-                        479: {
-                            fDirection: 'column',
-                            vAlign: 'flex-end'
-                        }
-                    }
-                }}>
+                <CardActionContainer>
                     <Description>Tools, tutorials and technical support.</Description>
                     <Icon icon='CircleArrow' />
-                </Flex>
+                </CardActionContainer>
             </Flex>
         </ChoiceCard>
         <ChoiceCard>
@@ -52,20 +42,10 @@ const Choice = () => {
                 }
             }}>
                 <P $style={{ size: '15px', color: 'header' }}>Community</P>
-                <Flex $style={{
-                    hAlign: 'space-between',
-                    vAlign: 'center',
-                    gap: '40px',
-                    queries: {
-                        479: {
-                            fDirection: 'column',
-                            vAlign: 'flex-end'
-                        }
-                    }
-                }}>
+                <CardActionContainer>
                     <Description>Join a forward-thinking group of smart contract enthusiasts.</Description>
                     <Icon icon='CircleArrow' />
-                </Flex>
+                </CardActionContainer>
             </Flex>
         </ChoiceCard>
     </ChoiceContainer>

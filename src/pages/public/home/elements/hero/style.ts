@@ -27,7 +27,7 @@ export const HeroWrapper = styled.div`
 
 export const BackgroundImage = styled.img`
     position: absolute;
-    top: 0;
+    top: 88px;
     right: 0;
     height: 550px;
     width: 1500px;
@@ -40,7 +40,7 @@ export const BackgroundImage = styled.img`
 
 export const MobileBackgroundImage = styled.img`
     position: absolute;
-    top: 0;
+    top: 88px;
     left: 65%;
     display: none;
     height: 100%;
@@ -64,7 +64,7 @@ export const MobileBackgroundImage = styled.img`
 
 export const Rect = styled.div`
     position: absolute;
-    top: 0;
+    top: 88px;
     left: 0;
     width: 20%;
     height: 100%;

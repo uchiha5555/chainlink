@@ -14,7 +14,7 @@ export const NodeOperatorWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 230px 288px;
+    padding: 230px 64px;
     max-width: 1440px;
     width: 100%;
 
@@ -60,6 +60,12 @@ export const BrandContainer = styled.div`
     margin-right: auto;
 `;
 
+export const ImageContainer = styled.div`
+    @media (max-width: 991px) {
+        margin-bottom: 2rem;
+    }
+`
+
 export const TopRect = styled.div`
     position: absolute;
     top: -128px;
@@ -81,3 +87,25 @@ export const BottomRect = styled.div`
     transform: rotate(-4deg);
     z-index: -1;
 `;
+
+export const OperatorAction = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    &>* {
+        :not(:last-child) {
+            margin-right: 50px;
+
+            @media (max-width: 479px) {
+                margin-right: 0px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    @media (max-width: 479px) {
+        flex-direction: column;
+    }
+`

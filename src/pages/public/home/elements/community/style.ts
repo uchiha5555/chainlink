@@ -11,7 +11,6 @@ export const CommunityWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 72px;
     max-width: 1440px;
     padding: 0 64px 72px;
     margin-left: auto;
@@ -25,6 +24,12 @@ export const CommunityWrapper = styled.div`
     @media (max-width: 768px) {
         padding-left: 24px;
         padding-right: 24px;
+    }
+
+    & > * {
+        &:not(:last-child) {
+            margin-bottom: 72px;
+        }
     }
 `;
 
@@ -49,3 +54,13 @@ export const Description = styled.div`
     line-height: 24px;
     max-width: 700px;
 `;
+
+export const CardActionContainer = styled.div`
+    display: flex;
+    align-items: center;
+    &>* {
+        :not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+`

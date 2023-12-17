@@ -56,7 +56,6 @@ const setStyle = ({
 		${fWrap ? `flex-wrap:		${fWrap};` : ``}
 		${vAlign ? `align-items:		${vAlign};` : ``}
 		${hAlign ? `justify-content:	${hAlign};` : ``}
-		${gap ? `gap:				${gap};` : ``}
 		${p ? `padding:			${p};` : ``}
 		${mb ? `margin-bottom:	${mb};` : ``}
 		${w ? `width:			${w};` : ``}
@@ -66,15 +65,20 @@ const setStyle = ({
 		${minH ? `max-height:		${minH};` : ``}
 		${maxH ? `max-height:		${maxH};` : ``}
 		${overflow ? `overflow:		${overflow};` : ``}
-		${
-      between
-        ? `
-			margin: 0 calc(-${between} * 2) 0 -${between};
-			&>* {
+		${between ? `margin: 0 calc(-${between} * 2) 0 -${between};
+      &>* {
 				padding: 0 ${between};
 			}
-		`
-        : ``
+		` : ``}
+    & > * {
+      &:not(:last-child) {
+        ${gap ? `margin-right: ${gap}` : ``};
+        ${gap ? `margin-bottom: ${gap}` : ``};
+        @media (max-width: 479px) {
+          margin-right: 0px;
+          ${gap ? `margin-bottom: ${gap}` : ``};
+        }
+      }
     }
 	`;
 };

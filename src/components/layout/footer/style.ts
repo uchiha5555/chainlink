@@ -47,9 +47,63 @@ export const CopyrightWrapper = styled.div`
     align-items: center;
     max-width: 1300px;
     width: 100%;
+
+    @media (max-width: 479px) {
+        flex-direction: column;
+    }
 `;
 
 export const CopyrightFont = styled.div`
     font-size: 14px;
     color: #858A95;
+`;
+
+export const CopyrightFont1 = styled.div`
+    font-size: 14px;
+    color: #858A95;
+
+    @media (max-width: 991px) {
+        display: none;
+    }
+`;
+
+export const CopyrightFont2 = styled.div`
+    font-size: 14px;
+    color: #858A95;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
+export const CustomFlex = styled.div`
+    display: flex;
+    align-items: center;
+
+    &>* {
+        :not(:last-child) {
+            margin-right: 24px;
+
+            @media (max-width: 479px) {
+                margin-bottom: 24px;
+                margin-right: 0px;
+            }
+        }
+    }
+`
+
+export const CustomFlex2 = styled.div`
+    display: flex;
+    align-items: center;
+
+    &>* {
+        :not(:last-child) {
+            margin-right: 24px;
+
+            @media (max-width: 479px) {
+                /* margin-bottom: 24px; */
+                margin-right: 24px;
+            }
+        }
+    }
 `

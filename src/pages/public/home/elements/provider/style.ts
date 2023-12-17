@@ -73,3 +73,25 @@ export const ProviderCustomButton = styled.button`
         width: 100%;
     }
 `;
+
+export const ProviderAction = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    &>* {
+        :not(:last-child) {
+            margin-right: 50px;
+
+            @media (max-width: 479px) {
+                margin-right: 0px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    @media (max-width: 479px) {
+        flex-direction: column;
+    }
+`

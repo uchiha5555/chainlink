@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardContainer, CommunityContainer, CommunityWrapper, Description } from './style';
+import { CardActionContainer, CardContainer, CommunityContainer, CommunityWrapper, Description } from './style';
 import { Flex, Grid, Heading, P } from '@/components/basic';
 import Image from '@/components/basic/img';
 
@@ -35,10 +35,10 @@ const Community = () => {
                             <Description>Chainlink Market is a resource hub for smart contract developers, data providers, and node operators to list and discover Chainlink Network resources.</Description>
                         </Flex>
                     </Flex>
-                    <Flex $style={{ vAlign: 'center', gap: '16px' }}>
+                    <CardActionContainer>
                         <P $style={{ color: 'primary' }}>Browse the market</P>
                         <Icon icon="CircleArrow" />
-                    </Flex>
+                    </CardActionContainer>
                 </CardContainer>
                 <CardContainer>
                     <Flex $style={{ fDirection: 'column', gap: '40px' }}>
@@ -48,10 +48,10 @@ const Community = () => {
                             <Description>Fiews is building Chainlink tools and services that offers an Ethereum as a Service (EaaS) tailored specifically for Chainlink nodes.</Description>
                         </Flex>
                     </Flex>
-                    <Flex $style={{ vAlign: 'center', gap: '16px' }}>
+                    <CardActionContainer>
                         <P $style={{ color: 'primary' }}>Browse the market</P>
                         <Icon icon="CircleArrow" />
-                    </Flex>
+                    </CardActionContainer>
                 </CardContainer>
                 <CardContainer>
                     <Flex $style={{ fDirection: 'column', gap: '40px' }}>
@@ -61,10 +61,10 @@ const Community = () => {
                             <Description>Chainlink Ecosystem gives you the latest news and information about partnerships, collaborations, and integrations with the Chainlink Network.</Description>
                         </Flex>
                     </Flex>
-                    <Flex $style={{ vAlign: 'center', gap: '16px' }}>
+                    <CardActionContainer>
                         <P $style={{ color: 'primary' }}>Browse the market</P>
                         <Icon icon="CircleArrow" />
-                    </Flex>
+                    </CardActionContainer>
                 </CardContainer>
             </Grid>
         </CommunityWrapper>

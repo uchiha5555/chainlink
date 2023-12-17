@@ -1,5 +1,5 @@
 import React from 'react'
-import { CopyrightContainer, CopyrightFont, CopyrightWrapper, FooterContainer, FooterWrapper } from './style';
+import { CopyrightContainer, CopyrightFont, CopyrightFont1, CopyrightFont2, CopyrightWrapper, CustomFlex, CustomFlex2, FooterContainer, FooterWrapper } from './style';
 import { Flex, Grid, P } from '@/components/basic';
 import { Icon } from '@/components/custom';
 
@@ -139,19 +139,19 @@ const Footer = () => {
       </FooterContainer>
       <CopyrightContainer>
         <CopyrightWrapper>
-          <Flex $style={{ vAlign: 'center', gap: '24px' }}>
+          <CustomFlex>
             <Icon icon='FooterLogo' width='auto' height='26px' />
-            <CopyrightFont>Chainlink®</CopyrightFont>
-            <CopyrightFont>© 2023 Chainlink Foundation</CopyrightFont>
-          </Flex>
-          <Flex $style={{ vAlign: 'center', gap: '24px' }}>
+            <CopyrightFont1>Chainlink®</CopyrightFont1>
+            <CopyrightFont2>© 2023 Chainlink Foundation</CopyrightFont2>
+          </CustomFlex>
+          <CustomFlex2>
             <Flex $style={{ vAlign: 'center', gap: '2px' }}>
               <Icon icon='Flag' />
               <CopyrightFont>EN</CopyrightFont>
             </Flex>
             <CopyrightFont>Privacy Policy</CopyrightFont>
             <CopyrightFont>Terms of Service</CopyrightFont>
-          </Flex>
+          </CustomFlex2>
         </CopyrightWrapper>
       </CopyrightContainer>
     </Flex>

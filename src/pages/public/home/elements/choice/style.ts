@@ -45,6 +45,28 @@ export const ChoiceCard = styled.div`
     }
 `;
 
+export const CardActionContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &>* {
+        :not(:last-child) {
+            margin-right: 40px;
+
+            @media (max-width: 479px) {
+                margin-right: 0px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    @media (max-width: 479px) {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+`
+
 export const IconContainer = styled.div`
     display: flex;
     justify-content: center;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrandContainer, DataProviderContainer, DataProviderWrapper, HeaderCaption, ProviderCustomButton, Subheader } from './style'
+import { BrandContainer, DataProviderContainer, DataProviderWrapper, HeaderCaption, ProviderAction, ProviderCustomButton, Subheader } from './style'
 import { Flex, Grid, Heading, P } from '@/components/basic'
 import Image from '@/components/basic/img';
 
@@ -117,20 +117,10 @@ const DataProvider = () => {
                     </Grid>
                 </BrandContainer>
             </Flex>
-            <Flex $style={{
-                vAlign: 'center',
-                hAlign: 'center',
-                gap: '50px',
-                w: '100%',
-                queries: {
-                    479: {
-                        fDirection: 'column'
-                    }
-                }
-            }}>
+            <ProviderAction>
                 <ProviderCustomButton>Monetize your API</ProviderCustomButton>
                 <P $style={{ size: '16px', color: 'primary', decorator: 'underline' }}>Learn more</P>
-            </Flex>
+            </ProviderAction>
         </DataProviderWrapper>
     </DataProviderContainer>
   )

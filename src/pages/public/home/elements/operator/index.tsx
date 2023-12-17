@@ -1,5 +1,5 @@
 import React from 'react'
-import { BottomRect, BrandContainer, HeaderCaption, NodeOperatorContainer, NodeOperatorWrapper, Subheader, TopRect } from './style'
+import { BottomRect, BrandContainer, HeaderCaption, ImageContainer, NodeOperatorContainer, NodeOperatorWrapper, OperatorAction, Subheader, TopRect } from './style'
 import { Flex, Grid, Heading, P } from '@/components/basic'
 import Image from '@/components/basic/img';
 
@@ -68,7 +68,9 @@ const NodeOperator = () => {
                         <HeaderCaption>Chainlink node operators are the backbone of the Chainlink Network, running and maintaining oracle infrastructure that helps ensure that smart contracts across every blockchain have secure access to the highest quality real-world data.</HeaderCaption>
                     </Flex>
                 </Flex>
-                <Image src={ChainlinkImage} alt='' $style={{ w: '400px', h: '300px' }} />
+                <ImageContainer>
+                    <Image src={ChainlinkImage} alt='' $style={{ w: '400px', h: '300px' }} />
+                </ImageContainer>
             </Flex>
         </Flex>
         <Flex $style={{ fDirection: 'column', vAlign: 'center', gap: '40px' }}>
@@ -114,20 +116,10 @@ const NodeOperator = () => {
                 </Grid>
             </BrandContainer>
         </Flex>
-        <Flex $style={{
-            vAlign: 'center',
-            hAlign: 'center',
-            gap: '50px',
-            w: '100%',
-            queries: {
-                479: {
-                    fDirection: 'column'
-                }
-            }
-        }}>
+        <OperatorAction>
             <ProviderCustomButton>Monetize your API</ProviderCustomButton>
             <P $style={{ size: '16px', color: 'primary', decorator: 'underline' }}>Learn more</P>
-        </Flex>
+        </OperatorAction>
         </NodeOperatorWrapper>
         <TopRect />
         <BottomRect />
