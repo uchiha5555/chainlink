@@ -12,31 +12,67 @@ export const HeroContainer = styled.div`
 `;
 
 export const HeroWrapper = styled.div`
+    position: relative;
     display: flex;
     flex-direction: column;
     max-width: 1440px;
     width: 100%;
-    margin: 120px 0;
-    padding: 0 64px;
+    padding: 120px 64px;
+    z-index: 0;
+
+    @media (max-width: 996px) {
+        padding: 120px 32px;
+    }
 `;
 
 export const BackgroundImage = styled.img`
     position: absolute;
     top: 0;
-    left: 140px;
+    right: 0;
     height: 550px;
     width: 1500px;
     z-index: -1;
+
+    @media (max-width: 996px) {
+        display: none;
+    }
+`;
+
+export const MobileBackgroundImage = styled.img`
+    position: absolute;
+    top: 0;
+    left: 65%;
+    display: none;
+    height: 100%;
+    width: auto;
+    max-width: none;
+    margin-left: -720px;
+    z-index: -1;
+
+    @media (max-width: 996px) {
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        margin-left: -800px;
+    }
+
+    @media (max-width: 479px) {
+        margin-left: -720px;
+    }
 `;
 
 export const Rect = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    width: 510px;
-    height: 550px;
+    width: 20%;
+    height: 100%;
     background: #DFE7FB;
     z-index: -1;
+    @media (max-width: 996px) {
+        display: none;
+    }
 `;
 
 export const HeroCaption = styled.div`
@@ -54,4 +90,8 @@ export const HeroCustomButton = styled.button<{ bg: string }>`
     box-shadow: 0px 12px 32px -12px rgba(12, 22, 44, 0.32);
     padding: 0 34px;
     height: 56px;
+
+    @media (max-width: 479px) {
+        width: 100%;
+    }
 `

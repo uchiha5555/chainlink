@@ -20,7 +20,7 @@ const Checkbox: React.FC<CheckboxPropsType> = ({
     return (
         <CheckboxContainer onClick={onChange} isChecked={isChecked ?? false}>
             <StyledCheckbox isChecked={isChecked ?? false} width={width ?? ''} height={height ?? ''} >
-                {isChecked && <Icon icon="Check" />}
+                {/* {isChecked && <Icon icon="Check" />} */}
             </StyledCheckbox>
             {label && label}
         </CheckboxContainer>

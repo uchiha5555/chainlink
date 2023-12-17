@@ -2,11 +2,16 @@ import styled from "styled-components";
 
 export const NavbarContainer = styled.div`
     display: flex;
-    align-items: center;
-    gap: 2rem;
+    justify-content: space-around;
+    align-items: stretch;
     padding: 0 1rem;
+    max-width: 900px;
     width: 100%;
     height: 100%;
+
+    @media (max-width: 996px) {
+        display: none;
+    }
 `;
 
 export const NavItem = styled.div`
@@ -17,4 +22,5 @@ export const NavItem = styled.div`
     font-size: 15px;
     color: #3d4556;
     font-weight: 400;
+    white-space: nowrap;
 `

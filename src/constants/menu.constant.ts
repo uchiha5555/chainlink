@@ -1,6 +1,4 @@
-import { FaUserAlt } from "react-icons/fa";
 import { IoHome } from "react-icons/io5";
-import { IoStarSharp } from "react-icons/io5";
 import _ROUTERS from "./route.constant";
 
 const MenuData: any = [
@@ -9,16 +7,6 @@ const MenuData: any = [
       text: "Home",
       router: _ROUTERS._HOME,
     },
-    {
-      icon: FaUserAlt,
-      text: "Profile",
-      router: _ROUTERS._PROFILE,
-    },
-    {
-      icon: IoStarSharp,
-      text: 'Battles',
-      router: _ROUTERS._BRACKETS
-    }
     // {
     //   icon: FaUserAlt,
     //   text: 'Brackets',

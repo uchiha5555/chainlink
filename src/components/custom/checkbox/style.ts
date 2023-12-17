@@ -17,8 +17,9 @@ export const StyledCheckbox = styled.div<{ isChecked: boolean, width?: string, h
   width: 18px;
   height: 18px;
   ${({ isChecked }) =>
-    isChecked ? `background-color: ${GV('purple')};` : `background-color: #232323;`}
+    isChecked ? `background-color: ${GV('purple')};` : `background-color: #fff;`}
   border-radius: 4px;
   transition: all ease-in-out .2s;
+  border: 1px solid #ced0d5;
   cursor: pointer;
 `;

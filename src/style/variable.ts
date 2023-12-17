@@ -13,7 +13,7 @@ const variables = {
   'bg-sub': '#1A2D474D',
 
   color: '#FFFFFF',
-  'color-secondary': '#9F96A7',
+  'color-secondary': '#9EA2AB',
   border1: '#C6E0FF80',
   border2: '#2B2928',
 
@@ -39,9 +39,9 @@ const variables = {
 
   'font-size': '16px',
   'font-size-1': '3rem',
-  'font-size-2': '2rem',
-  'font-size-3': '1.25rem',
-  'font-size-4': '1rem',
+  'font-size-2': '2.5rem',
+  'font-size-3': '2rem',
+  'font-size-4': '1.25rem',
   'font-size-5': '0.875rem',
   'font-size-6': '0.75rem',
   'font-size-7': '0.5rem',

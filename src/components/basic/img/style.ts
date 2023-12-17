@@ -4,6 +4,8 @@ import styled from 'styled-components';
 export interface InlineImagePropsType {
   w?: string;
   h?: string;
+  maxH?: string;
+  maxW?: string;
   bradius?: string;
 }
 
@@ -13,10 +15,12 @@ export interface StyledFlexPropsType extends InlineImagePropsType {
   queries?: QueryType;
 }
 
-const setStyle = ({ w, h, bradius }: InlineImagePropsType) => {
+const setStyle = ({ w, h, maxW, maxH, bradius }: InlineImagePropsType) => {
   return `
     width: ${w ?? `100%`};
     height: ${h ?? `auto`};
+    max-width: ${maxW ?? '100%'};
+    max-height: ${maxH ?? `100%`};
     border-radius: ${bradius ?? GV('radius-md')};
 	`;
 };
@@ -27,6 +31,12 @@ export const ImageContainer = styled.div<{ $style: StyledFlexPropsType }>`
   justify-content: center;
   max-width: 100%;
   overflow: hidden;
+  width: auto;
+  height: 100%;
+
+  @media (max-width: 600px) {
+    height: auto;
+  }
 
   ${({ $style }) => {
     const { queries, ...rest } = $style;
